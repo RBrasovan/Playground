@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href 'https://RBrasovan.github.io/Playground/'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "upload" : "npx angular-cli-ghpages --dir=dist/Playground"
   },
   "private": true,
   "dependencies": {
