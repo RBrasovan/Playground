@@ -1,4 +1,4 @@
-.container-fluid{padding:0!important}
+.container-fluid{padding:0!important}.row{padding:0 10%;margin:0!important}section{padding:35px 0}.dark-section{background-color:#343a40;width:100%;padding:20px;color:#fff}.blue-section{background-color:#cbf2e3}.white-section{background-color:#fff}h1,h2,h3,h4,h5,h6{font-family:parisine-office-std,sans-serif;font-weight:600}h1{font-size:3rem}h3{font-size:2rem}p{font-weight:200;font-size:1.6rem;font-family:mr-eaves-modern,sans-serif;line-height:100%;margin-bottom:40px}
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
