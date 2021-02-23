@@ -1,0 +1,11 @@
+[
+    {
+        "objects": {
+          "id":"1",
+            "name": "hammer",
+            "usable": true,
+            "weight": 1.5,
+            "damage": 5
+        }
+    }
+]

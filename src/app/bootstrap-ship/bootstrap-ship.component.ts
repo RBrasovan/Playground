@@ -8,6 +8,7 @@ import { faSkullCrossbones, faBookDead, faSkull, faCoins } from '@fortawesome/fr
   styleUrls: ['./bootstrap-ship.component.css']
 })
 export class BootstrapShipComponent implements OnInit {
+  title='booty';
   faGem = faGem;
   faCrossbones = faSkullCrossbones;
   faBookDead = faBookDead;

@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  needsUpdate() {
+    alert("Sorry I need to update this still.")
+  }
+
 }

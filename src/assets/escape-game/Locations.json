@@ -1,0 +1,14 @@
+[
+    {
+        "locations": {
+            "description": "You look around the room and see you are in an empty room with 2 doors to the left and to the right. Knowing not how you got there, you decide to figure out how to escape and get back to your normal life.",
+            "name": "start",
+            "objects": [],
+            "directions": [{
+                    "id":"1"
+                }, {
+                  "id":"2"
+                }]
+        }
+    }
+]

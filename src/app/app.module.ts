@@ -8,6 +8,9 @@ import { MainNavigationComponent } from './main-navigation/main-navigation.compo
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { BootstrapShipComponent } from './bootstrap-ship/bootstrap-ship.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EscapeComponent } from './escape/escape.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GameComponent } from './escape/game/game.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     MainNavigationComponent,
     MainFooterComponent,
-    BootstrapShipComponent
+    BootstrapShipComponent,
+    EscapeComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

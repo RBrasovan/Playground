@@ -1,0 +1,14 @@
+#gameArea {
+  background-color:#fff;
+}
+.form-control {
+  display: inline-block;
+}
+.input {
+  width:50%;
+  margin:20px 0px;
+}
+.btn {
+  display:inline-block;
+  margin:0px 40px;
+}
