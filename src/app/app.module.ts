@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EscapeComponent } from './escape/escape.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GameComponent } from './escape/game/game.component';
+import { GameService } from './escape/game.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { GameComponent } from './escape/game/game.component';
     FontAwesomeModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

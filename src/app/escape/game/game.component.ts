@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { GameService } from '../game.service';
+import {BehaviorSubject, Observable} from 'rxjs'
+import { Objects } from '../Models/objects';
+import { Locations } from '../Models/locations';
 
 @Component({
   selector: 'app-game',
@@ -14,22 +17,29 @@ export class GameComponent implements OnInit {
   });
   inputs : string[] = [];
   textAreaText : string;
+  objects : Objects[];
+  locations : Locations[];
 
   constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
     this.placeholder = "Welcome to Escape!"
-    this.gameService.getObjects();
-    this.gameService.getLocations();
+    this.objects = this.gameService.getObjects();
+    this.locations = this.gameService.getLocations();
+    console.log(this.gameService.getObjectByID(3));
   }
 
   update() {
     if(this.formgroup.valid) {
       this.inputs.push(this.formgroup.value.input)
-      console.log(document.getElementById("gameArea").clientHeight);
-      this.textAreaText = this.inputs.toString().replace(/,/g,"\n");
+      this.inputs.push('\n')
+      this.textAreaText = this.inputs.toString();
+      console.log(this.textAreaText);
+      this.textAreaText = this.textAreaText.replace(/,/g , '');
+      console.log(this.textAreaText);
       this.actions(this.inputs[this.inputs.length - 1]);
       this.formgroup.reset();
+      document.getElementById("gameArea").scrollTop = document.getElementById("gameArea").scrollHeight;
     }
   }
 

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Locations } from './Models/locations';
-import { Directions } from './Models/directions';
 import { Objects } from './Models/objects';
 import  *  as  objectJSON  from 'src/assets/escape-game/Objects.json';
 import  *  as  locationJSON  from 'src/assets/escape-game/Locations.json';
@@ -9,22 +8,36 @@ import  *  as  locationJSON  from 'src/assets/escape-game/Locations.json';
   providedIn: 'root'
 })
 export class GameService {
-  allObjects: Objects[] = (objectJSON as any).default;
-  allLocations: Locations[] = (locationJSON as any).default;
+  objectsData : any = objectJSON;
+  locationsData : any = locationJSON;
+  allObjects : Objects[] = [];
+  allLocations: Locations[] = [];
 
   constructor() { }
 
-  getObjects(): Objects[] {
-    const objects = this.allObjects;
-    return objects;
+  getObjects() {
+    this.objectsData.default.forEach(obj => {
+      this.allObjects.push(new Objects(obj));
+    });
+    return this.allObjects;
   }
 
   getLocations() {
-    let locations = new Array<Locations>();
-    console.log(this.allLocations[0]);
-    locations[0] = this.allLocations[0];
-    console.log(locations[0].id);
+    this.locationsData.default.forEach(obj => {
+      this.allLocations.push(new Locations(obj));
+    });
+    return this.allLocations;
 
+  }
+
+  getObjectByID(id : number) {
+    //console.log(this.objectsData.default);
+    return this.objectsData.default.find(obj => obj.id == id);
+  }
+
+  getLocationByID(id : number) {
+    //console.log(this.locationsData.default);
+    return this.locationsData.default.find(loc => loc.id == id);
   }
 
 }

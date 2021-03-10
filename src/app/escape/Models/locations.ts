@@ -1,23 +1,24 @@
 import { Objects } from "./objects";
 import { Directions } from "./directions";
+import { Characters } from "./characters";
 
 export class Locations {
   id: number;
   name: string;
   description: string;
-  objects : Objects[];
-  directions : Directions[];
+  objects : number[];
+  directions : number[];
+  characters : number[];
 
-  deserialize(input) {
-    this.id = input.id;
+  constructor(object) {
+    this.id = object.id;
+    this.name = object.name;
+    this.description = object.description;
+    this.objects = object.objects;
+    this.directions = object.directions;
+    this.characters = object.characters;
+  }
 
-    this.name = input.name;
-    this.description = input.description;
-    this.objects = new Array<Objects>().deserialize(input.objects);
-    this.directions = new Array<Directions>().deserialize(input.directions);
-
-    return this;
 }
 
-}
 
