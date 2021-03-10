@@ -1,11 +1,31 @@
 [
     {
-        "objects": {
-          "id":"1",
+          "id": 1,
             "name": "hammer",
             "usable": true,
-            "weight": 1.5,
+            "weight": 4,
+            "damage": 5
+        },
+        {
+          "id": 2,
+            "name": "gold",
+            "usable": false,
+            "weight": 1,
+            "damage": 0
+        },
+        {
+          "id":3,
+            "name": "bag",
+            "usable": true,
+            "weight": 1,
+            "damage": 0
+        },
+        {
+          "id":4,
+            "name": "skldjhfskdf",
+            "usable": true,
+            "weight": 4,
             "damage": 5
         }
-    }
+
 ]
